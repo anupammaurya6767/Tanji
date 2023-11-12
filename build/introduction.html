@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="Python" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Introduction &#8212; Tanji 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=8eae9801"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tanji Module" href="modules/tanji.html" />
+    <link rel="prev" title="Welcome to Tanji&#39;s Documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h1>
+<p>Welcome to the Tanji project, a Python package for handling symmetric and asymmetric encryption.</p>
+<p>This package provides a simple and straightforward way to encrypt and decrypt messages using a combination of symmetric (AES) and asymmetric (RSA) encryption.</p>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading">¶</a></h2>
+<p>Here is a simple example of how to use the Tanji package:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tanji.tanji</span> <span class="kn">import</span> <span class="n">Tanji</span>
+
+<span class="c1"># Create a Tanji instance</span>
+<span class="n">tanji</span> <span class="o">=</span> <span class="n">Tanji</span><span class="p">()</span>
+
+<span class="c1"># Generate a key pair</span>
+<span class="n">tanji</span><span class="o">.</span><span class="n">generate_key_pair</span><span class="p">()</span>
+
+<span class="c1"># Encrypt a message</span>
+<span class="n">encrypted_message</span><span class="p">,</span> <span class="n">ciphertext</span> <span class="o">=</span> <span class="n">tanji</span><span class="o">.</span><span class="n">encrypt_message</span><span class="p">(</span><span class="s2">&quot;Hello, Tanji!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Decrypt the message</span>
+<span class="n">decrypted_message</span> <span class="o">=</span> <span class="n">tanji</span><span class="o">.</span><span class="n">decrypt_message</span><span class="p">(</span><span class="n">encrypted_message</span><span class="p">,</span> <span class="n">ciphertext</span><span class="p">)</span>
+
+<span class="c1"># The decrypted_message should now be &quot;Hello, Tanji!&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Tanji</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/tanji.html">Tanji Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/symmetric.html">SymmetricCipher Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/asymmetric.html">AsymmetricCipher Module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Tanji's Documentation</a></li>
+      <li>Next: <a href="modules/tanji.html" title="next chapter">Tanji Module</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Anupam Maurya.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/introduction.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

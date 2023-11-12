@@ -13,8 +13,8 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Symmetric Module" href="symmetric.html" />
-    <link rel="prev" title="Readme" href="../readme.html" />
+    <link rel="next" title="SymmetricCipher Module" href="symmetric.html" />
+    <link rel="prev" title="Introduction" href="../introduction.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -33,6 +33,79 @@
             
   <section id="tanji-module">
 <h1>Tanji Module<a class="headerlink" href="#tanji-module" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="Tanji">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Tanji</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">secret_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tanji" title="Link to this definition">¶</a></dt>
+<dd><p>A class for handling symmetric and asymmetric encryption.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Tanji.secret_key">
+<span class="sig-name descname"><span class="pre">secret_key</span></span><a class="headerlink" href="#Tanji.secret_key" title="Link to this definition">¶</a></dt>
+<dd><p>The secret key used for symmetric encryption.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Tanji.private_key">
+<span class="sig-name descname"><span class="pre">private_key</span></span><a class="headerlink" href="#Tanji.private_key" title="Link to this definition">¶</a></dt>
+<dd><p>The private key used for asymmetric encryption.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Tanji.public_key">
+<span class="sig-name descname"><span class="pre">public_key</span></span><a class="headerlink" href="#Tanji.public_key" title="Link to this definition">¶</a></dt>
+<dd><p>The public key used for asymmetric encryption.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Tanji.iv">
+<span class="sig-name descname"><span class="pre">iv</span></span><a class="headerlink" href="#Tanji.iv" title="Link to this definition">¶</a></dt>
+<dd><p>The initialization vector used for symmetric encryption.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tanji.generate_key_pair">
+<span class="sig-name descname"><span class="pre">generate_key_pair</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Tanji.generate_key_pair" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a pair of private and public keys for asymmetric encryption.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tanji.encrypt_message">
+<span class="sig-name descname"><span class="pre">encrypt_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tanji.encrypt_message" title="Link to this definition">¶</a></dt>
+<dd><p>Encrypt a message using symmetric encryption, then encrypt the symmetric key using asymmetric encryption.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>str</em>) -- The message to be encrypted.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The encrypted symmetric key and the encrypted message, both base64 encoded.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tanji.decrypt_message">
+<span class="sig-name descname"><span class="pre">decrypt_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encrypted_sym_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ciphertext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tanji.decrypt_message" title="Link to this definition">¶</a></dt>
+<dd><p>Decrypt a symmetric key using asymmetric encryption, then decrypt a message using the decrypted symmetric key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encrypted_sym_key</strong> (<em>str</em>) -- The encrypted symmetric key, base64 encoded.</p></li>
+<li><p><strong>ciphertext</strong> (<em>str</em>) -- The encrypted message, base64 encoded.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The decrypted message.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 
@@ -54,18 +127,21 @@
 <h3>Navigation</h3>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Tanji Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="symmetric.html">Symmetric Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="asymmetric.html">Asymmetric Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tanji Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Tanji"><code class="docutils literal notranslate"><span class="pre">Tanji</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="symmetric.html">SymmetricCipher Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="asymmetric.html">AsymmetricCipher Module</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="../readme.html" title="previous chapter">Readme</a></li>
-      <li>Next: <a href="symmetric.html" title="next chapter">Symmetric Module</a></li>
+      <li>Previous: <a href="../introduction.html" title="previous chapter">Introduction</a></li>
+      <li>Next: <a href="symmetric.html" title="next chapter">SymmetricCipher Module</a></li>
   </ul></li>
 </ul>
 </div>

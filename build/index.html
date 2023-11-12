@@ -13,7 +13,7 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Readme" href="readme.html" />
+    <link rel="next" title="Introduction" href="introduction.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -32,13 +32,82 @@
             
   <section id="welcome-to-tanji-s-documentation">
 <h1>Welcome to Tanji's Documentation<a class="headerlink" href="#welcome-to-tanji-s-documentation" title="Link to this heading">¶</a></h1>
+<p>Welcome to the documentation for the Tanji project.Tanji is a Python encryption library that provides a secure and flexible solution for encrypting and decrypting messages. It leverages both symmetric and asymmetric encryption techniques to ensure the confidentiality and integrity of your data.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">README</span><a class="headerlink" href="#id1" title="Link to this code">¶</a></div>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Tanji Encryption Library 👩‍💻🔐</span>
+
+Tanji is a Python encryption library that provides a secure and flexible solution for encrypting and decrypting messages. It leverages both symmetric and asymmetric encryption techniques to ensure the confidentiality and integrity of your data.
+
+<span class="gu">## Features 🚀</span>
+
+<span class="k">-</span><span class="w"> </span><span class="gs">**Symmetric Encryption:**</span> Utilizes the Advanced Encryption Standard (AES) algorithm for symmetric key encryption.
+<span class="k">-</span><span class="w"> </span><span class="gs">**Asymmetric Encryption:**</span> Employs RSA algorithm for secure asymmetric key encryption.
+<span class="k">-</span><span class="w"> </span><span class="gs">**Base64 Encoding:**</span> Efficiently encodes encrypted data using Base64 for safe transmission.
+<span class="k">-</span><span class="w"> </span><span class="gs">**Key Pair Generation:**</span> Automatically generates RSA key pairs for secure communication.
+<span class="k">-</span><span class="w"> </span><span class="gs">**Random Initialization Vectors (IV):**</span> Uses random IVs to enhance security.
+<span class="k">-</span><span class="w"> </span><span class="gs">**Ease of Use:**</span> Simple and straightforward interface for encrypting and decrypting messages.
+
+<span class="gu">## How Tanji Differs 🤔</span>
+
+<span class="k">-</span><span class="w"> </span><span class="gs">**Robust Security:**</span> Tanji prioritizes the security of your data by combining symmetric and asymmetric encryption methods.
+<span class="k">-</span><span class="w"> </span><span class="gs">**Key Pair Generation:**</span> Automatically generates and manages RSA key pairs, simplifying the encryption process.
+<span class="k">-</span><span class="w"> </span><span class="gs">**Dynamic Initialization Vectors:**</span> Randomly generated IVs for each encryption enhance the resistance against cryptographic attacks.
+<span class="k">-</span><span class="w"> </span><span class="gs">**Base64 Encoding:**</span> Encoded data ensures compatibility and safe transmission across different systems.
+<span class="k">-</span><span class="w"> </span><span class="gs">**Developer-Friendly:**</span> Designed to be user-friendly and easily integrated into various Python projects.
+
+<span class="gu">## Getting Started 🏁</span>
+
+<span class="k">1.</span> Install Tanji:
+
+<span class="sb">    ```bash</span>
+<span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>tanji
+<span class="sb">    ```</span>
+
+<span class="k">2.</span> Use Tanji in your Python project:
+
+<span class="sb">    ```python</span>
+    <span class="kn">from</span> <span class="nn">tanji</span> <span class="kn">import</span> <span class="n">Tanji</span>
+
+    <span class="c1"># Example Usage</span>
+    <span class="n">tanji</span> <span class="o">=</span> <span class="n">Tanji</span><span class="p">()</span>
+    <span class="n">encrypted_message</span><span class="p">,</span> <span class="n">ciphertext</span> <span class="o">=</span> <span class="n">tanji</span><span class="o">.</span><span class="n">encrypt_message</span><span class="p">(</span><span class="s2">&quot;Hello, Tanji!&quot;</span><span class="p">)</span>
+    <span class="n">decrypted_message</span> <span class="o">=</span> <span class="n">tanji</span><span class="o">.</span><span class="n">decrypt_message</span><span class="p">(</span><span class="n">encrypted_message</span><span class="p">,</span> <span class="n">ciphertext</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original Message:&quot;</span><span class="p">,</span> <span class="s2">&quot;Hello, Tanji!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Encrypted Message:&quot;</span><span class="p">,</span> <span class="n">encrypted_message</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Decrypted Message:&quot;</span><span class="p">,</span> <span class="n">decrypted_message</span><span class="p">)</span>
+<span class="sb">    ```</span>
+
+<span class="gu">## Contributing 🤝</span>
+
+Contributions are welcome! Feel free to submit issues or pull requests.
+
+<span class="gu">## License 📄</span>
+
+This project is licensed under the MIT License - see the [<span class="nt">LICENSE</span>](<span class="na">LICENSE</span>) file for details.
+</pre></div>
+</div>
+</div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="readme.html">Readme</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules/tanji.html">Tanji Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules/symmetric.html">Symmetric Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules/asymmetric.html">Asymmetric Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/tanji.html">Tanji Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/tanji.html#Tanji"><code class="docutils literal notranslate"><span class="pre">Tanji</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/symmetric.html">SymmetricCipher Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/symmetric.html#SymmetricCipher"><code class="docutils literal notranslate"><span class="pre">SymmetricCipher</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/asymmetric.html">AsymmetricCipher Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/asymmetric.html#AsymmetricCipher"><code class="docutils literal notranslate"><span class="pre">AsymmetricCipher</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -70,17 +139,17 @@
 <h3>Navigation</h3>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules/tanji.html">Tanji Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules/symmetric.html">Symmetric Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules/asymmetric.html">Asymmetric Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/symmetric.html">SymmetricCipher Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/asymmetric.html">AsymmetricCipher Module</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="readme.html" title="next chapter">Readme</a></li>
+      <li>Next: <a href="introduction.html" title="next chapter">Introduction</a></li>
   </ul></li>
 </ul>
 </div>
