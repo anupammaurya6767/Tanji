@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tanji"
-version = "1.0.0"
+version = "1.0.3"
 description = "Tanji is a Python encryption library that provides a secure and flexible solution for encrypting and decrypting messages. It leverages both symmetric and asymmetric encryption techniques to ensure the confidentiality and integrity of your data."
 authors = ["Anupam Maurya <anupammaurya981@gmail.com>"]
 readme = "README.md"
