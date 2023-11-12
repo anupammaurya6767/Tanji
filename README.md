@@ -30,7 +30,7 @@ Tanji is a Python encryption library that provides a secure and flexible solutio
 2. Use Tanji in your Python project:
 
     ```python
-    from tanji import Tanji
+    from tanji.tanji import Tanji
 
     # Example Usage
     tanji = Tanji()
