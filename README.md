@@ -19,9 +19,6 @@ Tanji is a Python encryption library that provides a secure and flexible solutio
 - **Base64 Encoding:** Encoded data ensures compatibility and safe transmission across different systems.
 - **Developer-Friendly:** Designed to be user-friendly and easily integrated into various Python projects.
 
-<iframe width="500" height="300" src="https://twitframe.com/show?url=https://twitter.com/anupammaurya981/status/1731865225308078434" frameborder="0" allowfullscreen></iframe>
-
-
 ## Getting Started 🏁
 
 1. Install Tanji:
